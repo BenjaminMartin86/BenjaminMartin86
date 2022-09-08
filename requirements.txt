@@ -1,0 +1,7 @@
+openturns==1.14
+scikit-learn==0.19.1
+matplotlib
+numpy
+pandas==1.2.4
+openpyxl
+xlrd
