@@ -173,4 +173,12 @@ For more details and possibilities, check the [`DesignOfExperiments.ipynb`](http
 
 Statistical Regressions (MetaModels) <img alt="alt_text" width="110px" src="https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Pictures/3dPlot.png" />
 =============
-A meta-model (or response surface) is a substitution model for an existing model (numerical case) or a model intended to imitate an industrial process (experimental case). 2 classes of meta-models studied here: Polynomial Chaos and Gaussian Process Regressor, also calld Kriging model.
+A meta-model (or response surface) is a substitution model for an existing model (numerical case) or a model intended to imitate an industrial process (experimental case). Two classes of meta-models studied here: Polynomial Chaos (based on orthogonal base of polynoms) and Gaussian Process Regressor (based on statistical theory), also called Kriging model.
+The model fits input parameters with output response. Once you have a model, you can explore different possibilities, as for instance :
+- Sensitivity studies to determine influential parameters
+- Reduction of calculation time (e.g. substitution models for expensive finite element models)
+- Optimization of processes, search for optima, enrichment
+- Reliability and sizing (e.g. for tolerancing studies)
+- ...
+Several techniques are also proposed to check if your model correctly fits your datas, without under-over fitting your values (Validation Score, Cross validations, K-Folds, ...).
+Click on the link below and navigate to the notebooks to run a collection of interactive Jupyter notebooks showing the main functionalities of [`DesignOfExperiments.ipynb`](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/DesignOfExperiments.ipynb):
