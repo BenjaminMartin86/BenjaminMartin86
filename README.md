@@ -98,7 +98,6 @@ import numpy as np
 import openturns as ot
 from openturns.viewer import View
 
-
 # Coordinates of centers and number of levels per dimension
 center = ot.Point([0., 0.])
 levels = ot.Point([2, 4])
@@ -159,3 +158,4 @@ for i, distri in enumerate(distributions):
 fig.show()
 ```
 As a result, the following DoE are generated:
+<img src="https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Pictures/DoE-Sobol-UniformAndNormal.png" width="700">
