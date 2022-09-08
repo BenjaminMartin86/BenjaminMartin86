@@ -10,6 +10,10 @@
 
 4. **Sensitivity** : 3 methods to compute global sensitivity directly on samples or from model.
 
+This reposity propose an end-to-end statistical methodology project, from definition on input parameters, creation of Design of Experiments, construction of a surface response from meta-model, validation of the model and global sensitivity analysis.
+
+<img alt="alt_text" src="https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Pictures/Title2.png" />
+
 ---
 
 Installation
@@ -181,4 +185,9 @@ The model fits input parameters with output response. Once you have a model, you
 - Reliability and sizing (e.g. for tolerancing studies)
 - ...
 Several techniques are also proposed to check if your model correctly fits your datas, without under-over fitting your values (Validation Score, Cross validations, K-Folds, ...).
-Click on the link below and navigate to the notebooks to run a collection of interactive Jupyter notebooks showing the main functionalities of [`DesignOfExperiments.ipynb`](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/DesignOfExperiments.ipynb):
+Click on the link below and navigate to the notebooks to run a collection of interactive Jupyter notebooks showing the main functionalities of [`StatisticalRegression.ipynb`](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/StatisticalRegression.ipynb)
+
+We propose to create 2 models, one with Chaos Algorithm, second with Gaussian Process Regressor, to approximate the function Sinus Cardinal: 
+```math
+SE = 
+```
