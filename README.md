@@ -50,15 +50,22 @@ Distribution functions
 =============
 
 [Openturns](https://openturns.github.io/www/index.html) gives you the possibility to build discrete or continuous distributions. You can choose your distribution from precoded samples, or create your own distribution. For instance, for normal distribution :
-```
+```ruby
 import openturns as ot
 
 NormalDistribution = ot.Normal() 
 ```
 Plot the Probability density function (PDF) and the Cumulative Function Distribution (CFD):
-```
+```ruby
 from openturns.viewer import View
 
+NormalDistribution.setDescription(['Normal'])
 View(NormalDistribution.drawPDF()).show()
 View(NormalDistribution.drawCDF()).show()
 ```
+You can also get samples from your distribution:
+```ruby
+NormalDistribution.getSample(10)
+```
+
+For more details and possibilities, check the `Distribution functions` Notebook
