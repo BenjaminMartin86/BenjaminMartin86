@@ -76,3 +76,48 @@ NormalDistribution.getSample(10)
 <img src="https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Pictures/NormalDistributionSample.png" width="150">
 
 For more details and possibilities, check the [`Distributions functions.ipynb`](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Distribution%20functions.ipynb) Notebook
+
+
+Design of Experiments (DoE) <img alt="alt_text" width="90px" src="https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Pictures/DoE.jpg" />
+=============
+The **OpenTurns** library offers a section devoted to the development of experimental plans, alias "Designs of Experiments". All of the functions offered and the associated documentation are available [here](https://openturns.github.io/openturns/latest/user_manual/designs_of_experiments.html)
+
+The [`Distributions functions.ipynb`](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/DesignOfExperiments.ipynb) notebook illustrates some DOEs available in OpenTURNS:
+   - **Stratified** plans (axial, factorial, composite and box).
+   - Sequences with **low discrepancy** (Sobol', Halton, Haselgrove ...).
+   - **Quasi-random** plans (Latin hypercube).
+   - **random** plans (Monte Carlo).
+Click on the link below and navigate to the notebooks to run a collection of interactive Jupyter notebooks showing the main functionalities of [`DesignOfExperiments.ipynb`](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/DesignOfExperiments.ipynb):
+
+[<img alt="alt_text" width="90px" src="https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Pictures/JupyterLink.png" />](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/DesignOfExperiments.ipynb)
+The choice of the type of DeE is made regarding finality of what you need. If you have an idea of interaction of you input parameters on you model, you can choose a **stratified plan**. If you have no idea of the response of your process given input parameters, it's better to select a **quasi-random** or a **low discrepance** Doe. Both families are sensible to input distribution of your variables. **Low discrepance** have the nice property to keep their topological properties in case of enrichment. This is a great advantage when making experiments in a sequenced way.
+You can create your own DoE in a very short commands code. The following example shows the way to create stratified plans:
+```ruby
+import numpy as np
+import openturns as ot
+from openturns.viewer import View
+
+
+# Coordinates of centers and number of levels per dimension
+center = ot.Point([0., 0.])
+levels = ot.Point([2, 4])
+
+#  axial Doe
+axial_design = ot.Axial(center, levels).generate()
+axial_design *= 1/(max(levels) * 2)
+axial_design += 0.5
+
+#  factorial Doe
+factorial_design = ot.Factorial(center, levels).generate()
+factorial_design *= 1/(max(levels) * 2)
+factorial_design += 0.5
+
+# composite Doe
+composite_design = ot.Composite(center, levels).generate()
+composite_design *= 1/(max(levels) * 2)
+composite_design += 0.5
+
+# box Doe
+level_box = [3, 3]
+box_design = ot.Box(level_box).generate()
+```
