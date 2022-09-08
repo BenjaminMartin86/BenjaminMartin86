@@ -171,6 +171,7 @@ As a result, the following DoE are generated:
 
 <img src="https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Pictures/DoE-Sobol-UniformAndNormal.png" width="600">
 
+For more details and possibilities, check the [`DesignOfExperiments.ipynb`](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/DesignOfExperiments.ipynb) Notebook
 
 
 ---
