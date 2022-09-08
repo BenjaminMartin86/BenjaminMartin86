@@ -7,7 +7,9 @@
 3. **Statistical Regressions** : 2 classes or meta models to perform regression on datas or samples (Chaos Polynomial, Gaussian Process Regressor). Methods to access to performance of the model, and way to evaluate it to avoid under/over-fitting. Possibility to add noise to datas, to be close to real (industrial) samples (repeated several times, with a different result each time)
 
 4. **Sensitivity** : 3 methods to compute global sensitivity directly on samples or from model.
+
 ---
+
 Installation
 =============
 
@@ -44,6 +46,7 @@ To install compatible versions of modules for the notebook, you can install them
 ```
 conda install --yes --file requirements.txt
 ```
+
 ---
 
 Distribution functions <img alt="alt_text" width="90px" src="https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Pictures/RepartitionFunction.png" />
@@ -77,6 +80,7 @@ NormalDistribution.getSample(10)
 
 For more details and possibilities, check the [`Distributions functions.ipynb`](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Distribution%20functions.ipynb) Notebook
 
+---
 
 Design of Experiments (DoE) <img alt="alt_text" width="90px" src="https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Pictures/DoE.jpg" />
 =============
@@ -163,5 +167,8 @@ As a result, the following DoE are generated:
 
 For more details and possibilities, check the [`DesignOfExperiments.ipynb`](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/DesignOfExperiments.ipynb) Notebook
 
+---
+
 Statistical Regressions (MetaModels) <img alt="alt_text" width="110px" src="https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Pictures/3dPlot.png" />
 =============
+A meta-model (or response surface) is a substitution model for an existing model (numerical case) or a model intended to imitate an industrial process (experimental case). 2 classes of meta-models studied here: Polynomial Chaos and Gaussian Process Regressor, also calld Kriging model.
