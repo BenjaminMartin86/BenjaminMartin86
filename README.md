@@ -220,9 +220,15 @@ ax.set_zlabel('$\mathcal{M}(x_1,\,x_2)$')
 pl.show()
 ```
 
+As a result, the following surface is generated:
+
+<img src="https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Pictures/SinusCardinal.png" width="600">
+
 A set of 100 sample are generated, from LHS experiment, in the definition interval of $x$. In those points, we know exactly what is the value of the function. The [`StatisticalRegression.ipynb`](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/StatisticalRegression.ipynb) proposes two models to construct a response surface in all the interval of definition of $x$. It also gives a way to estimate accuracy of the model. The goal is to
 - Quantify the generalization capacity of a response surface.
 - Choose the best response surface among several model classes or different sets of parameters (when building the metamodel in general).
+Note that `gaussian_process` function used here (from  [Scikit-learn](https://scikit-learn.org/stable/modules/gaussian_process.html)) requires a version  `scikit-learn <= 0.19`
 The [`StatisticalRegression.ipynb`](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/StatisticalRegression.ipynb) proposes two classes of validation:
 - `Leave-one-out`: the validation base is only composed of one individual. This technique is used to calculate an adjustment coefficient, denoted $Q^2$, often called generalization coefficient
 - `K-Folds`: this is another variant which consists in dividing the initial basis into *K* disjoint and complementary sub-bases of equivalent sizes
+Cross Validation is made with `sklearn.cross_validation` module of  [Scikit-learn](https://scikit-learn.org/stable/modules/cross_validation.html).
