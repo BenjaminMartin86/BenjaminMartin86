@@ -7,3 +7,40 @@
 3. **Statistical Regressions** : 2 classes or meta models to perform regression on datas or samples (Chaos Polynomial, Gaussian Process Regressor). Methods to access to performance of the model, and way to evaluate it to avoid under/over-fitting. Possibility to add noise to datas, to be close to real (industrial) samples (repeated several times, with a different result each time)
 
 4. **Sensitivity** : 3 methods to compute global sensitivity directly on samples or from model.
+
+Installation
+=============
+
+Create your own virtual environnement
+------------
+
+Provides the conda environnement interface to ensure compatibility of methods and librairies.
+Create numerical environnement :
+```
+conda create --yes --name StatisticalMethodologies python=3.7
+```
+
+Active it : 
+```
+conda activate StatisticalMethodologies
+```
+
+Set new environnement on Jupyter Notebook
+------------
+Activate new environnement on Jupyter Notebook
+```
+conda install --yes -c anaconda ipykernel
+```
+
+We need to manually add the kernel if we want to have the virtual environment in the Jupyter Notebook
+```
+python -m ipykernel install --user --name=StatisticalMethodologies
+```
+
+Install required modules
+------------
+
+To install compatible versions of modules for the notebook, you can install them from the command :
+```
+conda install --yes --file requirements.txt
+```
