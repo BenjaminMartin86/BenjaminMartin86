@@ -46,7 +46,7 @@ conda install --yes --file requirements.txt
 ```
 ---
 
-Distribution functions
+Distribution functions <img alt="alt_text" width="90px" src="https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Pictures/RepartitionFunction.png" />
 =============
 Click on the link below and navigate to the notebooks to run a collection of interactive Jupyter notebooks showing the main functionalities of [`Distributions functions.ipynb`](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Distribution%20functions.ipynb):
 
