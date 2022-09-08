@@ -188,6 +188,41 @@ Several techniques are also proposed to check if your model correctly fits your 
 Click on the link below and navigate to the notebooks to run a collection of interactive Jupyter notebooks showing the main functionalities of [`StatisticalRegression.ipynb`](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/StatisticalRegression.ipynb)
 
 We propose to create 2 models, one with Chaos Algorithm, second with Gaussian Process Regressor, to approximate the function Sinus Cardinal: 
-```math
-SE = 
+$sinc(x) = \frac{sin(x)}{x}$.
+
+```ruby
+import numpy as np
+import pylab as pl
+from mpl_toolkits.mplot3d import Axes3D
+
+def M(x):
+    """Fonction sinus Cardinal"""
+    t = np.sqrt(np.sum(x ** 2., axis=1))
+    z = np.sin(t) / t
+    z[t == 0.] = 1.
+    return z
+
+# Definition of a grid to plot the model
+res = 100
+x1_plot, x2_plot = np.meshgrid(np.linspace(-10., 10., res),
+                               np.linspace(-10., 10., res))
+x_plot = np.vstack([x1_plot.ravel(), x2_plot.ravel()]).T
+y_plot = M(x_plot).reshape(res, res)
+
+# Plot
+fig = pl.figure(1)
+ax = Axes3D(fig)
+ax.plot_surface(x1_plot, x2_plot, y_plot,
+                rstride=2, cstride=2, cmap=pl.matplotlib.cm.jet,linewidth = 0.2)
+ax.set_xlabel('$x_1$')
+ax.set_ylabel('$x_2$')
+ax.set_zlabel('$\mathcal{M}(x_1,\,x_2)$')
+pl.show()
 ```
+
+A set of 100 sample are generated, from LHS experiment, in the definition interval of $x$. In those points, we know exactly what is the value of the function. The [`StatisticalRegression.ipynb`](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/StatisticalRegression.ipynb) proposes two models to construct a response surface in all the interval of definition of $x$. It also gives a way to estimate accuracy of the model. The goal is to
+- Quantify the generalization capacity of a response surface.
+- Choose the best response surface among several model classes or different sets of parameters (when building the metamodel in general).
+The [`StatisticalRegression.ipynb`](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/StatisticalRegression.ipynb) proposes two classes of validation:
+- `Leave-one-out`: the validation base is only composed of one individual. This technique is used to calculate an adjustment coefficient, denoted $Q^2$, often called generalization coefficient
+- `K-Folds`: this is another variant which consists in dividing the initial basis into *K* disjoint and complementary sub-bases of equivalent sizes
