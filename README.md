@@ -158,9 +158,10 @@ for i, distri in enumerate(distributions):
 fig.show()
 ```
 As a result, the following DoE are generated:
-<img src="https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Pictures/DoE-Sobol-UniformAndNormal.png" width="700">
+
+<img src="https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Pictures/DoE-Sobol-UniformAndNormal.png" width="600">
 
 For more details and possibilities, check the [`DesignOfExperiments.ipynb`](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/DesignOfExperiments.ipynb) Notebook
 
-Statistical Regressions (DoE) <img alt="alt_text" width="90px" src="https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Pictures/3dPlot.png" />
+Statistical Regressions (DoE) <img alt="alt_text" width="110px" src="https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Pictures/3dPlot.png" />
 =============
