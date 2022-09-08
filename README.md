@@ -239,3 +239,24 @@ The [`StatisticalRegression.ipynb`](https://github.com/BenjaminMartin86/Statisti
 Cross Validation is made with `sklearn.cross_validation` module of  [Scikit-learn](https://scikit-learn.org/stable/modules/cross_validation.html).
 
 For more details and possibilities, check the [`StatisticalRegression.ipynb`](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/StatisticalRegression.ipynb) Notebook
+
+---
+
+Global Sensitivity <img alt="alt_text" width="110px" src="https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Pictures/Sensitivity.png" />
+=============
+
+Here are proposed two methods to get global sensitivity builded model:
+- `SRC indices`
+- `Sobol' indices` (by Monte Carlo and polynomial chaos post-processing)
+
+`SRC indices` assume that the studied **model** *g* is (approximately) **linear** in the input variables. The **SRC indices** (Standardized Regression Coefficient) are between 0 and 1 and the sum is equal to 1. The indices translate the portion of the variance of the response $Y$ that can be attributed to the variable $X_i$.
+`SRC indices` can be directly be computed from `ChaosAlgorithm`.  At the end of a polynomial chaos calculation, the global sensitivity analysis is obtained without additional cost. The partial variances $V_i$ are obtained as sum of squares of correctly sorted coefficients.
+In the case of correlated input variables, the `ANCOVA` method can be used to quantify the effect of the correlation.
+
+Assuming $X_{input}$ the input vector and $Y_{input}$ the response, `SRC indices` can be easily obtained from [Openturns](https://openturns.github.io/www/index.html) module:
+
+```ruby
+import openturns as ot
+
+SRC = ot.CorrelationAnalysis_SRC(X_input, Y_input)
+```
