@@ -171,7 +171,7 @@ As a result, the following DoE are generated:
 
 <img src="https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Pictures/DoE-Sobol-UniformAndNormal.png" width="600">
 
-For more details and possibilities, check the [`DesignOfExperiments.ipynb`](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/DesignOfExperiments.ipynb) Notebook
+
 
 ---
 
@@ -184,6 +184,11 @@ The model fits input parameters with output response. Once you have a model, you
 - Optimization of processes, search for optima, enrichment
 - Reliability and sizing (e.g. for tolerancing studies)
 - ...
+
+Click on the link below and navigate to the notebooks to run a collection of interactive Jupyter notebooks showing the main functionalities of [`StatisticalRegression.ipynb`](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/StatisticalRegression.ipynb):
+
+[<img alt="alt_text" width="90px" src="https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Pictures/JupyterLink.png" />](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/StatisticalRegression.ipynb)
+
 Several techniques are also proposed to check if your model correctly fits your datas, without under-over fitting your values (Validation Score, Cross validations, K-Folds, ...).
 Click on the link below and navigate to the notebooks to run a collection of interactive Jupyter notebooks showing the main functionalities of [`StatisticalRegression.ipynb`](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/StatisticalRegression.ipynb)
 
@@ -232,3 +237,5 @@ The [`StatisticalRegression.ipynb`](https://github.com/BenjaminMartin86/Statisti
 - `Leave-one-out`: the validation base is only composed of one individual. This technique is used to calculate an adjustment coefficient, denoted $Q^2$, often called generalization coefficient
 - `K-Folds`: this is another variant which consists in dividing the initial basis into *K* disjoint and complementary sub-bases of equivalent sizes
 Cross Validation is made with `sklearn.cross_validation` module of  [Scikit-learn](https://scikit-learn.org/stable/modules/cross_validation.html).
+
+For more details and possibilities, check the [`StatisticalRegression.ipynb`](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/StatisticalRegression.ipynb) Notebook
