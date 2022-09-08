@@ -48,6 +48,7 @@ conda install --yes --file requirements.txt
 
 Distribution functions
 =============
+Click on the link below and navigate to the notebooks/ folder to run a collection of interactive Jupyter notebooks showing the main functionalities of Distributions functions.
 
 [Openturns](https://openturns.github.io/www/index.html) gives you the possibility to build discrete or continuous distributions. You can choose your distribution from precoded samples, or create your own distribution. For instance, for normal distribution :
 ```ruby
@@ -70,5 +71,6 @@ You can also get samples from your distribution:
 ```ruby
 NormalDistribution.getSample(10)
 ```
+<img src="https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Pictures/NormalDistributionSample.png" width="150">
 
 For more details and possibilities, check the `Distribution functions` Notebook
