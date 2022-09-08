@@ -249,6 +249,10 @@ Here are proposed two methods to get global sensitivity builded model:
 - `SRC indices`
 - `Sobol' indices` (by Monte Carlo and polynomial chaos post-processing)
 
+Click on the link below and navigate to the notebooks to run a collection of interactive Jupyter notebooks showing the main functionalities of [`Sensitivity.ipynb`](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Sensitivity.ipynb):
+
+[<img alt="alt_text" width="90px" src="https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Pictures/JupyterLink.png" />](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Sensitivity.ipynb)
+
 `SRC indices` assume that the studied **model** *g* is (approximately) **linear** in the input variables. The **SRC indices** (Standardized Regression Coefficient) are between 0 and 1 and the sum is equal to 1. The indices translate the portion of the variance of the response $Y$ that can be attributed to the variable $X_i$.
 `SRC indices` can be directly be computed from `ChaosAlgorithm`.  At the end of a polynomial chaos calculation, the global sensitivity analysis is obtained without additional cost. The partial variances $V_i$ are obtained as sum of squares of correctly sorted coefficients.
 In the case of correlated input variables, the `ANCOVA` method can be used to quantify the effect of the correlation.
@@ -260,3 +264,21 @@ import openturns as ot
 
 SRC = ot.CorrelationAnalysis_SRC(X_input, Y_input)
 ```
+
+Sobol indexes can be easily be obtained once `FunctionalChaosSobolIndices` model created. Assuming $i$ the dimension of the input vector  $X_{input}$: 
+
+```ruby
+import openturns as ot
+
+PCE = ot.FunctionalChaosSobolIndices(metaModelResult)
+# #Sobol indexes :
+#Order 1
+S1_chaos = np.array([PCE.getSobolIndex([i]) for i in range(dim)])
+#Order 2
+S2_chaos = np.array([PCE.getSobolIndex([i, j]) for i in range(dim) for j in range(dim) if i < j])
+#Order 3
+ST_chaos = np.array([PCE.getSobolTotalIndex([i]) for i in range(dim)])
+```
+
+
+An application case is proposed here. For more details and possibilities, check the [`Sensitivity.ipynb`](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Sensitivity.ipynb) Notebook
