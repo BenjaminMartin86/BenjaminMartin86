@@ -75,4 +75,4 @@ NormalDistribution.getSample(10)
 ```
 <img src="https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Pictures/NormalDistributionSample.png" width="150">
 
-For more details and possibilities, check the `Distribution functions` Notebook
+For more details and possibilities, check the [`Distributions functions.ipynb`](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Distribution%20functions.ipynb) Notebook
