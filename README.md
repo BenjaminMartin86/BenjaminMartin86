@@ -63,6 +63,8 @@ NormalDistribution.setDescription(['Normal'])
 View(NormalDistribution.drawPDF()).show()
 View(NormalDistribution.drawCDF()).show()
 ```
+![alt text](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Pictures/NormalDistributionGraph.png| width=100)
+
 You can also get samples from your distribution:
 ```ruby
 NormalDistribution.getSample(10)
