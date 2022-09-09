@@ -271,7 +271,7 @@ import openturns as ot
 SRC = ot.CorrelationAnalysis_SRC(X_input, Y_input)
 ```
 
-Sobol indexes can be easily be obtained once `FunctionalChaosSobolIndices` model created. Assuming $i$ the dimension of the input vector  $X_{input}$: 
+Sobol indexes can be easily be obtained once `FunctionalChaosSobolIndices` model created. Assuming $dim$ the dimension of the input vector  $X_{input}$: 
 
 ```ruby
 import openturns as ot
