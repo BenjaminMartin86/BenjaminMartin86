@@ -97,6 +97,7 @@ The [`Distributions functions.ipynb`](https://github.com/BenjaminMartin86/Statis
    - Sequences with **low discrepancy** (Sobol', Halton, Haselgrove ...).
    - **Quasi-random** plans (Latin hypercube).
    - **random** plans (Monte Carlo).
+   
 Click on the link below and navigate to the notebooks to run a collection of interactive Jupyter notebooks showing the main functionalities of [`DesignOfExperiments.ipynb`](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/DesignOfExperiments.ipynb):
 
 [<img alt="alt_text" width="90px" src="https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/Pictures/JupyterLink.png" />](https://github.com/BenjaminMartin86/Statistical-Methodologies/blob/main/DesignOfExperiments.ipynb)
